@@ -1,4 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router/index.js';
+import Scrollmagic from 'scrollmagic'
 
-createApp(App).mount('#app')
+createApp(App)
+  .use(router)
+  .use(Scrollmagic)
+  .mount('#app')
