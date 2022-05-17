@@ -17,7 +17,7 @@
           <span class="title">kakaotalk</span>
           <div class="left-text">
             
-            <a href="" @click="go" class="go-to">
+            <a href="" @click.prevent="go" class="go-to">
               <span>To the page </span>
               <span class="material-symbols-outlined">
                 arrow_forward
