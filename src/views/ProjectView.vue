@@ -16,7 +16,8 @@
         <div class="left">
           <span class="title">kakaotalk</span>
           <div class="left-text">
-            <a href="https://kangsuji.github.io/izone-talk-2021/" target="_blank" class="go-to">
+            
+            <a href="" @click="go" class="go-to">
               <span>To the page </span>
               <span class="material-symbols-outlined">
                 arrow_forward
@@ -140,6 +141,10 @@ export default {
     }
   },
   methods: {
+    go() {
+      window.open('https://kangsuji.github.io/izone-talk-2021/','',
+      'toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=650, height=1200, top=100,left=300');
+    },
     goContent (id) {
       if(this.$route.params.message){
         id = this.$route.params.message;
@@ -160,7 +165,7 @@ export default {
 <style scoped>
 .project-section {
   width: 100%;
-  height: 85vh;
+  height: 100%;
   font-family: 'Libre Baskerville', sans-serif;
   color: #384364;
 }
@@ -253,15 +258,16 @@ background-image: url("../assets/imgs/omdb-search.png");
 
 .go-top {
   position: fixed;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border: 1px solid #384364;
   bottom: 20px;
-  right: 50px;
+  right: 35px;
   text-align: center;
-  line-height: 50px;
+  line-height: 35px;
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
+  opacity: .7;
 }
 </style>

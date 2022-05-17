@@ -52,9 +52,9 @@
         <div class="info-content back-to-position to-left">
           <ul class="skill-info">
             <li>Vue</li>
+            <li>JAVA SCRIPT</li>
             <li>HTML5</li>
             <li>CSS3</li>
-            <li>JAVA SCRIPT</li>
             <li>JAVA</li>
             <li>JSP</li>
             <li>SQL</li>
@@ -62,6 +62,7 @@
         </div>
         
       </div>
+      <div @click="goTop" class="go-top">Top</div>
     </div>
   </div>
 </template>
@@ -86,7 +87,11 @@ export default {
       
     })
   },
-  
+  methods: {
+    goTop() {
+      window.scrollTo({top:0, behavior:'smooth'})
+    }
+  }
 }
 </script>
 
@@ -128,13 +133,16 @@ export default {
     transform: translateX(0);
   }
   
+
+
   .about-content .info-title {
     padding: 50px 0px;
     font-size: 3rem;
   }
   .info-content {
     line-height: 25px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
   .career-info{
     margin-bottom: 30px;
@@ -150,8 +158,23 @@ export default {
   .skill-info li {
     font-size: 1.5rem;
     margin-right: 20px;
+    text-align: center;
   }
   .about-content:last-child {
     margin-bottom: 200px;
   }
+  .go-top {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #384364;
+  bottom: 20px;
+  right: 50px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: .7;
+}
 </style>

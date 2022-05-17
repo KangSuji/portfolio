@@ -2,65 +2,60 @@
   <div>
     <header>
       <div class="header-section">
-        <button @click="showMenu">
+        <button @click="toggleModal">
           <span class="material-symbols-outlined">menu</span>
         </button>
        
-        <span class="logo">KANG SUJI PORTPOLIO</span>
+        <span class="logo">
+          <router-link to="/">
+            KANG SUJI PORTPOLIO
+          </router-link>
+        </span>
         <div class="mode">
-          <!-- <span class="material-symbols-outlined">light_mode</span>
-          <span class="material-symbols-outlined">nightlight</span> -->
+          <router-link to="/about">
+            <span class="material-symbols-outlined">person</span>
+          </router-link>
         </div>
       </div>
-      <div class="menu-wrap">
-        <div class="menu-list-section">
-          <span @click="closeMenu" class="material-symbols-outlined">close</span>
-          <ul class="menu-list">
-            <li><router-link to="/home" @click="closeMenu">Home</router-link></li>
-            <li><router-link to="/about" @click="closeMenu">About</router-link></li>
-            <li><router-link to="/project" @click="closeMenu">Project</router-link></li>
-            <li>Contact</li>
-          </ul>
-          <div class="menu-right">
-            <div class="menu-r-top">
-              <div></div>
-              <div></div>
-            </div>
-            <div class="menu-r-bottom">
-              <div>
-                <img src="../assets/imgs/logo.png" />
+      <transition name="fade">
+        <div class="menu-wrap" v-if="isOpen">
+          <div class="menu-list-section">
+            <span @click="toggleModal" class="material-symbols-outlined">close</span>
+            <ul class="menu-list">
+              <li><router-link to="/home" @click="toggleModal">Home</router-link></li>
+              <li><router-link to="/about" @click="toggleModal">About</router-link></li>
+              <li><router-link to="/project" @click="toggleModal">Project</router-link></li>
+              <li>Resume</li>
+            </ul>
+            <div class="menu-right">
+              <div class="menu-r-top">
+                <div></div>
+                <div></div>
               </div>
-              <div>KANG SUJI</div>
+              <div class="menu-r-bottom">
+                <div>
+                  <img src="../assets/imgs/logo.png" />
+                </div>
+                <div>KANG SUJI</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </transition>
     </header>
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    this.$nextTick(function () {
-      const el = document.querySelector('.menu-wrap');
-        el.style.visibility = 'hidden';
-        el.style.opacity ='0';
-        el.style.transition = 'all 0.3s';
-    })
+  data() {
+    return {
+      isOpen: false
+    }
   },
   methods: {
-    showMenu() {
-      const el = document.querySelector('.menu-wrap');
-      el.style.visibility = 'visible';
-      el.style.opacity ='1'
-      el.style.transition = 'all 0.3s';
-    },
-    closeMenu() {
-      const el = document.querySelector('.menu-wrap');
-      el.style.visibility = 'hidden';
-      el.style.opacity ='0'
-      el.style.transition = 'all 0.3s';
+    toggleModal() {
+      this.isOpen = !this.isOpen
     }
   }
 }
@@ -76,7 +71,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 0 44px 0 50px;
-    transition: all 0.3s;
+    
   }
   .header-section button {
     border: none;
@@ -90,16 +85,35 @@ export default {
     font-family: 'Abril Fatface', cursive;
     font-weight: 700;
   }
-  .mode {
+  .logo a {
+    text-decoration: none;
+    color: #384364;
+  }
+  .mode a{
     font-size: 1.5rem;
+    color: #384364;
   }
   .mode span:first-child {
     margin-right: 10px;
   }
 
   /* meun section */
+  .fade-enter,
+  .fade-enter-from {
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease-out;
+  }
+
+  .fade-leave-to {
+    opacity: 0;
+  }
+  
   .menu-wrap {
-    visibility: hidden;
     width: 100%;
     height: 100vh;
     padding: 0px 0px 0px 50px;
@@ -107,9 +121,7 @@ export default {
     background-color: #FBF8F3;
     position: absolute;
     top: 0;
-    opacity: 0;
-    transition: all 0.3s;
-    z-index: 3;
+    z-index: 3; 
   }
   .menu-list-section{
     top: 0px;
