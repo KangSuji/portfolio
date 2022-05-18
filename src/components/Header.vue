@@ -25,7 +25,7 @@
               <li><router-link to="/home" @click="toggleModal">Home</router-link></li>
               <li><router-link to="/about" @click="toggleModal">About</router-link></li>
               <li><router-link to="/project" @click="toggleModal">Project</router-link></li>
-              <li>Resume</li>
+              <li><router-link to="/contact" @click="toggleModal">Contact</router-link></li>
             </ul>
             <div class="menu-right">
               <div class="menu-r-top">
@@ -172,6 +172,7 @@ export default {
     width: 30%;
     height: 50vh;
     background: url("../assets/imgs/img4.jpg");
+    background-color: #FBF8F3;
     background-size: cover;
     background-attachment: scroll;
     background-position-x: -200px;
@@ -208,5 +209,6 @@ export default {
     color: rgba(0, 0, 0, 0);
     background-image: url("../assets/imgs/img3.jpg");
     background-size: cover;
+    background-color: #FBF8F3;
   }
 </style>
