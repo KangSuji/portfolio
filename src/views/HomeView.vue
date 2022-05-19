@@ -21,13 +21,6 @@
   </div>
 </template>
 
-<script>
-
-export default {
- 
-}
-</script>
-
 <style scoped>
   .home-section {
     padding: 0 44px 0 57px
@@ -144,5 +137,16 @@ export default {
     opacity: 1;
   } 
   
-   
+  @media (max-width: 650px) { 
+    .home-container .home-list:nth-child(even) span,
+    .home-container .home-list:nth-child(odd) span  {
+      font-size: 5rem;
+    }
+    .home-container .home-list:nth-child(even) span {
+      top: 100px;
+    }
+    .home-container .home-list:nth-child(odd) span {
+      top: 50px;
+    }
+  }
 </style>

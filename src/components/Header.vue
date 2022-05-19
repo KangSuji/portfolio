@@ -84,6 +84,7 @@ export default {
     font-size: 2rem;
     font-family: 'Abril Fatface', cursive;
     font-weight: 700;
+    text-align: center;
   }
   .logo a {
     text-decoration: none;
@@ -210,5 +211,17 @@ export default {
     background-image: url("../assets/imgs/img3.jpg");
     background-size: cover;
     background-color: #FBF8F3;
+  }
+  @media (max-width: 650px) {
+    .menu-wrap {
+      padding: 0;
+    }
+    .menu-list li {
+      font-size: 5rem;
+    }
+    .menu-right {
+      visibility: hidden;
+    }
+    
   }
 </style>

@@ -143,7 +143,7 @@ export default {
   methods: {
     go() {
       window.open('https://kangsuji.github.io/izone-talk-2021/','',
-      'toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=650, height=1200, top=100,left=300');
+      'toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=640, height=1200, top=100,left=300');
     },
     goContent (id) {
       if(this.$route.params.message){
@@ -269,5 +269,37 @@ background-image: url("../assets/imgs/omdb-search.png");
   font-weight: 700;
   cursor: pointer;
   opacity: .7;
+}
+@media (max-width: 650px) {
+  .project-nav {
+  margin-top: 50px;
+  }
+  .project-nav ul {
+    display: inline;
+    text-align: center;
+  }
+  .project-nav li {
+    line-height: 30px;
+  }
+  .project-content {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 200px 0px 100px 0px;
+  }
+  .project-content .left {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .project-content .title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .project-content .right {
+    width: 100%;
+    height: 50vh;
+  }
+ 
 }
 </style>

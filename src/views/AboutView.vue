@@ -147,6 +147,9 @@ export default {
   .career-info{
     margin-bottom: 30px;
   }
+  .career-info li:first-child {
+    margin-top: 10px;
+  }
   .career-info li {
     line-height: 30px;
 
@@ -176,5 +179,19 @@ export default {
   font-weight: 700;
   cursor: pointer;
   opacity: .7;
+}
+@media (max-width: 650px) {
+  .career-info li:first-child {
+    margin-top: 10px;
+  }
+  .career-info li {
+    margin-bottom: 10px;
+  }
+  .skill-info {
+    display: block;
+  }
+  .skill-info li {
+    text-align: start;  
+  }
 }
 </style>
