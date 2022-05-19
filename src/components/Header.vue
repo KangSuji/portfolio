@@ -34,7 +34,9 @@
               </div>
               <div class="menu-r-bottom">
                 <div>
-                  <img src="../assets/imgs/logo.png" />
+                  <a href="https://github.com/KangSuji">
+                    <img src="../assets/imgs/logo.png" />
+                  </a>
                 </div>
                 <div>KANG SUJI</div>
               </div>
