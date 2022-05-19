@@ -134,11 +134,11 @@ export default {
   name:"project",
   mounted() {
     if(this.$route.params.message){
-      const id = this.$route.params.message;
-      console.log(id);
+      let id = this.$route.params.message;
       const el = document.querySelector(`#${id}`).offsetTop;
       window.scrollTo({top:el, behavior:'smooth'})
     }
+      
   },
   methods: {
     go() {
@@ -146,12 +146,6 @@ export default {
       'toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=640, height=1200, top=100,left=300');
     },
     goContent (id) {
-      if(this.$route.params.message){
-        id = this.$route.params.message;
-        console.log(id);
-        const el = document.querySelector(`#${id}`).offsetTop;
-        window.scrollTo({top:el, behavior:'smooth'})
-      }
       const el = document.querySelector(`#${id}`).offsetTop;
       window.scrollTo({top:el, behavior:'smooth'})
     },
