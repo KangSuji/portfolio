@@ -8,7 +8,7 @@
        
         <span class="logo">
           <router-link to="/">
-            KANG SUJI PORTPOLIO
+            KANG SUJI PORTFOLIO
           </router-link>
         </span>
         <div class="mode">
