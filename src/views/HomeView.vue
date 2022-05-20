@@ -137,7 +137,13 @@
     opacity: 1;
   } 
   
-  @media (max-width: 650px) { 
+  @media (max-width: 650px) {
+    .home-container .home-list {
+     
+     
+      height: 40vh;
+      
+    } 
     .home-container .home-list:nth-child(even) span,
     .home-container .home-list:nth-child(odd) span  {
       font-size: 5rem;

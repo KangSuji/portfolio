@@ -58,6 +58,24 @@ export default {
   methods: {
     toggleModal() {
       this.isOpen = !this.isOpen
+      let el ='';
+      if(this.$route.path === '/home'){
+        el = document.querySelector('.home-section');      
+      }else if(this.$route.path === '/about') {
+        el = document.querySelector('.about-section');
+      }else if(this.$route.path === '/project') {
+        el = document.querySelector('.project-section');
+      }else if(this.$route.path === '/contact') {
+        el = document.querySelector('.contact-section');
+      }
+      if( el ){
+        if(this.isOpen === true) {
+          el.style.display = 'none'; 
+        }else if (this.isOpen === false ) {
+          el.style.display = 'block';
+        }
+      }
+      
     }
   }
 }
@@ -67,6 +85,7 @@ export default {
   header {
     padding: 21px 0px;
     color: #384364;
+    overflow: hidden;
   }
   .header-section {
     display: flex;
@@ -124,7 +143,7 @@ export default {
     background-color: #FBF8F3;
     position: absolute;
     top: 0;
-    z-index: 3; 
+    z-index: 3;
   }
   .menu-list-section{
     top: 0px;
@@ -219,10 +238,10 @@ export default {
       padding: 0;
     }
     .menu-list li {
-      font-size: 5rem;
+      font-size: 4rem;
     }
     .menu-right {
-      visibility: hidden;
+      display: none;
     }
     
   }
