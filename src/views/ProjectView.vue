@@ -264,17 +264,7 @@ background-image: url("../assets/imgs/omdb-search.png");
   cursor: pointer;
   opacity: .7;
 }
-@media (max-width: 650px) {
-  .project-nav {
-  margin-top: 50px;
-  }
-  .project-nav ul {
-    display: inline;
-    text-align: center;
-  }
-  .project-nav li {
-    line-height: 30px;
-  }
+@media (max-width: 970px) {
   .project-content {
     width: 100%;
     display: block;
@@ -293,6 +283,19 @@ background-image: url("../assets/imgs/omdb-search.png");
   .project-content .right {
     width: 100%;
     height: 50vh;
+  }
+ 
+}
+@media (max-width: 650px) {
+  .project-nav {
+  margin-top: 50px;
+  }
+  .project-nav ul {
+    display: inline;
+    text-align: center;
+  }
+  .project-nav li {
+    line-height: 30px;
   }
  
 }
