@@ -16,19 +16,15 @@
           <div>2020. 06. 12. ~ 2020. 11. 26.(총 800시간)</div>
           <div>이젠아카데미</div>
           <p>
-            [과정평가형]정보처리산업기사(JAVA, 자바프로그래밍, 백엔드 웹개발자) B
+            [과정평가형]정보처리산업기사(JAVA, 자바프로그래밍, 백엔드 웹개발자)B
+          </p><br/>
+          <div>훈련내용</div>
+          <p>
+            애플리케이션 배포/ 프로그래밍 언어활용/ 응용SW 기초기술 활용/ 
+            화면 구현/ SQL활용/ 
           </p>
         </div>
-        <div class="info-content back-to-position to-left">
-          <div>2015. 08. ~ 2016. 05.</div>
-          <div>Flapjack Pantry</div>
-          <p>아르바이트</p>
-        </div>
-        <div class="info-content back-to-position to-left">
-          <div>2014. 03. ~ 2015. 07.</div>
-          <div>Bistro Re-</div>
-          <p>아르바이트</p>
-        </div>
+        
       </div>
       <div class="about-content ">
         <div class="info-title back-to-position to-right">Career</div>
@@ -51,13 +47,43 @@
         <div class="info-title back-to-position to-left">Skills</div>
         <div class="info-content back-to-position to-left">
           <ul class="skill-info">
-            <li>Vue</li>
-            <li>JAVA SCRIPT</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JAVA</li>
-            <li>JSP</li>
-            <li>SQL</li>
+            <li>
+              Vue
+              <p>
+                vue2,vue3를 써본 경험이 있습니다. 
+                vue-router, vuex 사용할수있습니다.
+              </p>
+            </li>
+            <li>
+              JAVA SCRIPT
+              <p>
+                ES6+ 문법을 사용할수 있습니다.
+                webpack, parcel등의 번들러 사용경험이 있습니다.
+              </p>
+            </li>
+            <li>HTML5/CSS3
+              <p>
+                웹표준을 지키려 노력합니다. scss문법을 사용해본적이 있습니다.
+                tailwind,bootstrap을 사용해본 경험이 있습니다.
+                BEM 방법론을 적용할수 있습니다.
+              </p>
+            </li>
+            
+            <li>JAVA
+              <p>
+                java를 이용한 로직작성이 가능합니다.
+              </p>
+            </li>
+            <li>JSP
+              <p>
+                model2 방식을 사용해 게시판, 쇼핑몰을 만들어본 경험이 있습니다.
+              </p>
+            </li>
+            <li>SQL
+              <p>
+                DML, DDL, DCL문법과 기본함수를 사용할 수 있습니다.
+              </p>
+            </li>
           </ul>
         </div>
         
@@ -98,7 +124,7 @@ export default {
 <style scoped>
   .about-section {
     width: 100%;
-    overflow: hidden;
+   
   }
   .about-content-wrap {
     width: 50vw;
@@ -110,7 +136,7 @@ export default {
   .about-content {
     margin-bottom: 100px;
     width: 100%;
-    height: 400px;
+    
     font-family: 'Abril Fatface', Nanum Gothic;
     opacity: 0;
     transition: 0.5s;
@@ -154,14 +180,15 @@ export default {
     line-height: 30px;
 
   }
-  .skill-info {
-    display: flex;
+  .skill-info li {
+    
+    font-size: 1.5rem;
+    margin-bottom: 10px;
     
   }
-  .skill-info li {
-    font-size: 1.5rem;
-    margin-right: 20px;
-    text-align: center;
+  .skill-info li p {
+    margin-left: 10px;
+    font-size: 1.2rem;
   }
   .about-content:last-child {
     margin-bottom: 200px;
