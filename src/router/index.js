@@ -1,20 +1,19 @@
 import { createWebHistory, createRouter } from "vue-router";
-import HomeView from '../views/HomeView.vue';
-import AboutView from '../views/AboutView.vue';
-import ProjectView from '../views/ProjectView.vue';
-import ContactView from '../views/ContactView.vue';
+import HomeView from "../views/HomeView.vue";
+import AboutView from "../views/AboutView.vue";
+import ProjectView from "../views/ProjectView.vue";
+import ContactView from "../views/ContactView.vue";
 
 const routes = [
   {
-    path:'/',
+    path: "/",
     component: HomeView,
-    props: true
+    props: true,
   },
   {
     path: "/home",
-    name: 'HomeView',
+    name: "HomeView",
     component: HomeView,
-
   },
   {
     path: "/about",
@@ -25,8 +24,7 @@ const routes = [
     path: "/project",
     name: "project",
     component: ProjectView,
-    props: true
-   
+    props: true,
   },
   {
     path: "/contact",

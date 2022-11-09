@@ -1,38 +1,46 @@
 <template>
-  <Header></Header>
+  <Header2></Header2>
+  <HomeSection01></HomeSection01>
   <transition name="page">
     <router-view></router-view>
   </transition>
   <Footer></Footer>
+  <Header></Header>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
+import Header from "./components/Header.vue";
+import Header2 from "./components/Header2.vue";
+import HomeSection01 from "./views/HomeSection01.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
-    Footer
-  }
-}
+    Header2,
+    HomeSection01,
+    Footer,
+  },
+};
 </script>
 
 <style>
-  body {
-    background-color: #FBF8F3;
-  }
-    /* transition */
-  .page-enter,
-  .page-enter-from{
-    transition: opacity .5s;
-    opacity: 0;
-  }
-  .page-enter-active, .page-leave-active {
-    transition: opacity .5s;
-  }
-  .page-enter, .page-leave-to {
-    opacity: 0;
-  }
+body {
+  background-color: #fbf8f3;
+}
+/* transition */
+.page-enter,
+.page-enter-from {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
 </style>

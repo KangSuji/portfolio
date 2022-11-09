@@ -12,9 +12,12 @@
     "emailjs-com": "^3.2.0",
     "gsap": "^3.10.4",
     "lodash": "^4.17.21",
+    "rellax": "^1.12.1",
     "scrollmagic": "^2.0.8",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.13"
+    "vue-parallax-js": "^0.2.3",
+    "vue-router": "^4.0.13",
+    "vue3-parallax": "^0.1.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.15",
