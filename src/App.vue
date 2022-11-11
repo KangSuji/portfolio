@@ -1,6 +1,7 @@
 <template>
   <Header2></Header2>
   <HomeSection01></HomeSection01>
+  <HomeSection02></HomeSection02>
   <transition name="page">
     <router-view></router-view>
   </transition>
@@ -12,6 +13,7 @@
 import Header from "./components/Header.vue";
 import Header2 from "./components/Header2.vue";
 import HomeSection01 from "./views/HomeSection01.vue";
+import HomeSection02 from "./views/HomeSection02.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
@@ -20,6 +22,7 @@ export default {
     Header,
     Header2,
     HomeSection01,
+    HomeSection02,
     Footer,
   },
 };
